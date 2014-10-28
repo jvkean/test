@@ -1,0 +1,81 @@
+FORMAT: 1A
+
+# QuantifiedJeff
+QuantifiedJeff attempts to provide a public, virtual version of Jeff that can be integrated into your life
+
+# Group Attributes
+A list of basic attributes you can use to integrate me into your D&D game
+
+## Attribute Collection [/attributes]
+### List current attributes [GET]
++ Response 200 (application/json)
+
+        [{
+            "id": 1, "label": "STR", "value": 11
+        }, {
+            "id": 2, "label": "DEX", "value": 14
+        }, {
+            "id": 3, "label": "CON", "value": 8
+        }, {
+            "id": 4, "label": "INT", "value": 15
+        }, {
+            "id": 5, "label": "WIS", "value": 7
+        }, {
+            "id": 6, "label": "CHA", "value": 12
+        }, {
+            "id": 7, "label": "Name", "value": "Jeffrey"
+        }, {
+            "id": 6, "label": "Race", "value": "Human"
+        }, {
+            "id": 6, "label": "Class", "value": "Fighter"
+        }, {
+            "id": 6, "label": "Level", "value": 1
+        }, {
+            "id": 6, "label": "MaxHP", "value": 8
+        }, {
+            "id": 6, "label": "CurrentHP", "value": 8
+        }]
+
+
+
+# Group Notes
+Notes related resources of the **Notes API**
+
+## Notes Collection [/notes]
+### List all Notes [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Jogging in park"
+        }, {
+          "id": 2, "title": "Pick-up posters from post-office"
+        }]
+
+### Create a Note [POST]
++ Request (application/json)
+
+        { "title": "Buy cheese and bread for breakfast." }
+
++ Response 201 (application/json)
+
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }
+
+## Note [/notes/{id}]
+A single Note object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+
+### Retrieve a Note [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "title": "Pick-up posters from post-office" }
+
+### Remove a Note [DELETE]
++ Response 204
