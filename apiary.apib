@@ -6,7 +6,7 @@ QuantifiedJeff attempts to provide a public, virtual version of Jeff that can be
 # Group Attributes
 A list of basic attributes you can use to integrate me into your D&D game
 
-## Attribute Collection [/attributes]
+## Attributes Collection [/attributes]
 ### List current attributes [GET]
 + Response 200 (application/json)
 
@@ -35,30 +35,30 @@ A list of basic attributes you can use to integrate me into your D&D game
         }, {
             "id": 6, "label": "CurrentHP", "value": 8
         }]
+        
+## Attribute [/attributes/{label}]
+A single attribute
+
++ Parameters
+    + label (required, string, `STR`) ... example value
+    
+
+
+
+    
+    
+
+
+### Retrieve an Individual Attribute [GET]
++ Response 200 (application/json)
+
 
 
 
 # Group Notes
 Notes related resources of the **Notes API**
 
-## Notes Collection [/notes]
-### List all Notes [GET]
-+ Response 200 (application/json)
 
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
-
-### Create a Note [POST]
-+ Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
 
 ## Note [/notes/{id}]
 A single Note object with all its details
