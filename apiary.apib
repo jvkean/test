@@ -8,7 +8,7 @@ A list of basic attributes you can use to integrate me into your D&D game
 
 ## Attributes Collection [/attributes]
 ### List current attributes [GET]
-+ Response 200 (application/json)
++ Response 200 (application/hal+json)
 
         [{
             "id": 1, "label": "STR", "value": 11
@@ -45,37 +45,17 @@ A single attribute
 
 
 
-    
-    
-
-
 ### Retrieve an Individual Attribute [GET]
-+ Response 200 (application/json)
-
-
-
-
-# Group Notes
-Notes related resources of the **Notes API**
-
-
-
-## Note [/notes/{id}]
-A single Note object with all its details
-
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-
-### Retrieve a Note [GET]
-+ Response 200 (application/json)
++ Response 200 (application/hal+json)
 
     + Header
-
-            X-My-Header: The Value
-
+        
+            X-MyHeader: The Value
+                
     + Body
+        
+            { "label": "STR", "value": "11" }
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
 
-### Remove a Note [DELETE]
-+ Response 204
+
+
